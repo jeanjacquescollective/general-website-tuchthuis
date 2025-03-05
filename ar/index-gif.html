@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tuchthuis AR</title>
+  <style media="screen">
+    .arjs-loader {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 10s;
+    }
+
+    .arjs-loader div {
+      text-align: center;
+      font-size: 1.25em;
+      color: white;
+    }
+  </style>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.3/dist/aframe-transparent-video-shader.umd.js"></script> -->
+  <script src="js/gif-shader.js"></script>
+  <!-- <script src="js/aframe-transparent-video-shader.umd.js" charset="utf-8"></script> -->
+  <link rel="stylesheet" href="css/master.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+</head>
+
+<body>
+  <div class="arjs-loader" id="loading">
+    <div>Loading, please wait...
+      <ul>
+        <li>Scan de marker met de camera</li>
+        <li>Beweeg rond de objecten voor de beste ervaring</li>
+        <li>De luisterverhalen kan je doorlopend afspelen</li>
+      </ul>
+    </div>
+
+  </div>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5;' vr-mode-ui="enabled: false" id="scene">
+    <a-assets>
+      <img id="brood-1" src="assets/gif/brood-1.gif">
+      <img id="brood-2" src="assets/gif/brood-2.gif">
+      <img id="brood-3" src="assets/gif/brood-3.gif">
+      <img id="blikken-1" src="assets/gif/blikken-1.gif">
+      <img id="blikken-2" src="assets/gif/blikken-2.gif">
+      <img id="blikken-3" src="assets/gif/blikken-3.gif">
+      <img id="lekken-1" src="assets/gif/lekkende-mensen-1.gif">
+      <img id="rachel-1" src="assets/gif/rachel-1.gif">
+      <img id="rachel-2" src="assets/gif/rachel-2.gif">
+      <img id="vechten-1" src="assets/gif/vecht.gif">
+      <a-asset-item id="cell" src="assets/cell.gltf" preload="auto"></a-asset-item>
+      <a-asset-item id="werkplaats" src="assets/werkplaats.gltf" preload="auto"></a-asset-item>
+      <a-asset-item id="gang" src="assets/gang.gltf" preload="auto"></a-asset-item>
+      <a-asset-item id="tuchthuis" src="assets/tuchthuis.gltf" preload="auto"></a-asset-item>
+    </a-assets>
+    <!-- poi  1: Grenswachter Rachel - barcode 2: intrance and ditte and freya 1 -->
+    <a-marker type='barcode' value='4' smooth='true' smoothCount='10'>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="0 0 0" material="shader:gif;src:#rachel-1;alphaTest:1.0;" flatShading='true'></a-plane>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="0 0 -1" material="shader:gif;src:#rachel-2;alphaTest:1.0;" flatShading='true'></a-plane>
+    </a-marker>
+    <!-- poi  2: Cel Magali - barcode 4: cel and ditte and freya 2 -->
+    <a-marker type='barcode' value='7' smooth='true' smoothCount='20'>
+      <a-entity gltf-model="#cell" position="0 10 0" scale="10 10 10" rotation='0 90 -90' static-position='-13 10 -8' static-rotation='0 0 0' static-scale='20 20 20'></a-entity>
+    </a-marker>
+    <!-- poi  3: Werkruimte Magali - barcode 7: werkplaats and ditte and freya 3 -->
+    <a-marker type='barcode' value='16' smooth='true' smoothCount='20'>
+      <a-entity gltf-model="#werkplaats" position="0 10 0" scale="10 10 10" rotation='0 90 -90' static-position='-13 30 -8' static-rotation='0 90 0' static-scale='20 20 20'></a-entity>
+    </a-marker>
+    <!-- poi  3a: Werkruimte Magali - barcode 14: animatie lekkende mensen stan -->
+    <a-marker type='barcode' value='3' smooth='true' smoothCount='10'>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="0 0 0" material="shader:gif;src:#lekken-1;alphaTest:1.0;" flatShading='true'></a-plane>
+    </a-marker>
+    <!-- poi  4: gang Magali - barcode 16: gang and ditte and freya 7-->
+    <a-marker type='barcode' value='25' smooth='true' smoothCount='20'>
+      <a-entity gltf-model="#gang" position="0 10 0" scale="10 10 10" rotation='-90 0 0' static-position='0 10 -8' static-rotation='0 0 0' static-scale='20 20 20'></a-entity>
+    </a-marker>
+    <!-- poi  5: Monica spullen - barcode 23: blik tabak and ditte and freya 4-->
+    <a-marker type='barcode' value='28' smooth='true' smoothCount='10'>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="0 0 0" material="shader:gif;src:#blikken-1;alphaTest:1.0;" flatShading='true'></a-plane>
+      <a-plane width='1' height='1' rotation='-90 0 0' position=".5 -1 -.75" material="shader:gif;src:#blikken-2;alphaTest:1.0;" flatShading='true'></a-plane>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="-.5 -2 -.75" material="shader:gif;src:#blikken-3;alphaTest:1.0;" flatShading='true'></a-plane>
+    </a-marker>
+    <!-- poi  6: Monica ramen - barcode 28: dekentrekken and ditte and freya 5-->
+    <a-marker type='barcode' value='2' smooth='true' smoothCount='10'>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="0 0 0" material="shader:gif;src:#vechten-1;alphaTest:1.0;" flatShading='true'></a-plane>
+    </a-marker>
+    <!-- poi  7: Monica ramen - barcode 31: dekentrekken and ditte and freya 6-->
+    <a-marker type='barcode' value='31' smooth='true' smoothCount='10'>
+      <a-plane width='1.4' height='1' rotation='-90 0 0' position="0 0 0" material="shader:gif;src:#brood-1;alphaTest:1.0;" flatShading='true'></a-plane>
+      <a-plane width='1' height='1' rotation='-90 0 0' position=".5 -1 -.75" material="shader:gif;src:#brood-2;alphaTest:1.0;" flatShading='true'></a-plane>
+      <a-plane width='1' height='1' rotation='-90 0 0' position="-.5 -2 -.75" material="shader:gif;src:#brood-3;alphaTest:1.0;" flatShading='true'></a-plane>
+    </a-marker>
+    <a-marker type='barcode' value='14' smooth='true' smoothCount='10'>
+      <a-entity gltf-model="#tuchthuis" scale=".02 .02 .02" markeritem='6' position='0 0 0' rotation='-90 0 0' gesture-handler static-position='0 0 -5' static-rotation='30 0 0' static-scale='0.01 0.01 0.01'>
+      </a-entity>
+    </a-marker>
+    <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+    <!-- https://github.com/supermedium/superframe/tree/master/components/orbit-controls -->
+    <a-entity camera orbit-controls="enabled: true;"></a-entity>
+  </a-scene>
+  <div class="button--close--container hidden animate-opacity" onclick="deleteStatics()" id="button--close-static">
+    <div class="button--close ">
+      x
+    </div>
+  </div>
+  <audio controls class="audio-controls hidden animate-opacity" id="audio-control">
+    <source src="" type="audio/mpeg" id="audio-source">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="js/loadAssets.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      let loadingElement = document.getElementById('loading');
+      console.log("loading complete");
+      if (loadingElement) {
+        loadingElement.classList.add("hidden");
+      }
+    });
+  </script>
+  <!-- <script type="text/javascript">
+    document.getElementById("btn3").addEventListener("click", (e)=>{
+      console.log("pause");
+      console.log(document.querySelector('.myvideo23'));
+      var v = document.querySelector('.myvideo23').pause();
+    })
+    document.getElementById("btn4").addEventListener("click", (e)=>{
+
+        console.log("play");
+      var v = document.querySelector('.myvideo23').play();
+    })
+    </script> -->
+</body>
+
+</html>

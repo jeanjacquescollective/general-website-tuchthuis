@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jean-Jacques Collective">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuchthuis AR</title>
+  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/slideshow.css">
+  <link rel="stylesheet" href="./css/scroll.css">
+  <link rel="stylesheet" href="./css/lightbox.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+</head>
+
+<body>
+  <section class="hero hero--background">
+    <img src="img/tuchthuis-logo.svg" alt="logo tuchthuis AR" class="hero__logo">
+    <a href="ar" class="button button--main" language="du">Applicatie openen</a>
+    <a href="ar" class="button button--main hidden" language="en">Open application (dutch only)</a>
+    <a href="#tuchthuis-ar" class="button--scroll-down" address="true"></a>
+    <div class="copyright">
+      © KIK-IRPA
+    </div>
+  </section>
+  <header>
+    <div class="logo-container">
+      <img src="img/tuchthuis-logo.svg" alt="logo tuchthuis AR" id="logo">
+    </div>
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a class="" href="#tuchthuis-ar" onclick="closeMenu()">
+            <span>Tuchthuis AR</span>
+          </a></li>
+        <li><a class="" href="#tuchthuis-info" onclick="closeMenu()">
+            <span language="du">Geschiedenis</span>
+            <span class="hidden" language="en">History</span>
+          </a></li>
+        <li><a class="" href="#artists" onclick="closeMenu()">
+            <span language="du">Artiesten</span>
+            <span class="hidden" language="en">Artists</span>
+          </a></li>
+        <!-- <li><a class="" href="#artist-statement" onclick="closeMenu()">Artist statement</a></li> -->
+        <li><a class="" href="./ar" onclick="closeMenu()">
+            <span language="du">Applicatie</span>
+            <span class="hidden" language="en">Application</span>
+          </a></li>
+        <li>
+          <div class="language--wrapper" id="language--buttons" onclick="closeMenu()">
+            <span class="language--button" id="english--button" language="en">
+              EN
+            </span>
+            <span class="language--button" id="dutch--button" language="du">
+              NL
+            </span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="tuchthuis-ar" id="tuchthuis-ar">
+    <h2 class="reveal">Tuchthuis AR</h2>
+    <div class="reveal" language="du">
+      <p>Lange, duistere gangen, traliewerk, kleine cellen, piepende deuren, nauwelijks daglicht, wilde begroeiing, graffiti van getormenteerde gevangenen, de holle echo van voetstappen en veel duiven. Het Tuchthuis van Vilvoorde was oorspronkelijk
+        een heropvoedingsgesticht voor landlopers, bedelaars en jonge diefjes; in de volksmond sprak men van ‘de correctie’. Vanaf 1871 werd het een militaire instelling en dat bleef het voor zo’n 100 jaar. Het Tuchthuis kent een uitgebreide
+        geschiedenis van verhalen over dwangarbeid, overbevolking, pyromanie, ontsnappingen en een beroemde architect die van fraude werd beticht.
+      </p>
+      <img class="img-between" src="img/extra/lekkende-mensen.gif" alt="Dripping humans">
+      <p>
+        Tuchthuis AR is een tentoonstelling die gebruik maakt van augmented reality om de fascinerende verhalen en de architecturale constructies van het Tuchthuis naar buiten te brengen. Via open call werden zeven startende artiesten geselecteerd,
+        om samen met curatoren Lucas Dewulf en Jannes Lambrecht het gebouw te ontdekken en de geschiedenis te vertellen.
+        Zo ontstaat er een multidisciplinaire tentoonstelling waarbij augmented reality in dialoog gaat met architectuur, anekdotes, erfgoed en kunst.
+      </p>
+    </div>
+    <div class="hidden reveal" language="en">
+      <p>Long, dark corridors, iron bars, small cells, squeaky doors, hardly any daylight, wild vegetation, graffiti by tormented prisoners, the hollow echo of footsteps and many, many pigeons.
+        The Tuchthuis operated originally as a disciplinary institute for drifters, beggars and young thieves.
+        It was commonly known by the vernacular ‘de correctie’, which means ‘to correct’.
+        In 1871 it became a military institution and remained so for about 100 years. The Tuchthuis knows a long history of forced labour, overpopulation, pyromania, prison breakouts and a famous architect who was accused of fraud.
+      </p>
+      <img class="img-between" src="img/extra/lekkende-mensen.gif" alt="Dripping humans">
+      <p>
+        Tuchthuis AR is an exhibition that uses augmented reality to expose the fascinating stories and architectural constructions of the Tuchthuis.
+        Seven young artists were selected via open call to explore the building and tell its history, together with curators Lucas Dewulf and Jannes Lambrecht.
+        The result is a multidisciplinary exhibition where augmented reality enters into dialogue with art, architecture, and heritage.
+      </p>
+    </div>
+  </section>
+  <section class="tuchthuis-info" id="tuchthuis-info" class="reveal">
+    <h2 class="" language="du">Geschiedenis</h2>
+    <h2 class="hidden" language="en">History</h2>
+    <div class="" language="du">
+      <p>Het Tuchthuis van Vilvoorde is na dat van Gent de tweede ‘moderne’ gevangenis van het land.
+        Keizerin Maria-Theresia van Oostenrijk kondigt de oprichting ervan aan op 30 december 1773.
+        Als locatie wordt de site van de hertogelijke burcht van Vilvoorde gekozen, die al als gevangenis fungeert.
+
+      </p>
+      <div class="audio-wrapper">
+        <iframe style="border: 0; width: 80%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2256079948/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/" seamless><a
+            href="https://korrectietuchthuis.bandcamp.com/album/korrecties">Korrecties by Ditte Jacoby &amp; Freya Van Nieuwenhuysen</a></iframe>
+      </div>
+      <p>Laurent-Benoît Dewez, hofarchitect van het Oostenrijkse bestuur,
+        wordt na een wedstrijd aangesteld als architect.
+        Dewez’ neoclassicistische ontwerp is vernieuwend in een landschap van overheersend barok. Deze stijl wordt op dat moment enkel gebruikt voor paleizen, kastelen en abdijen.</p>
+    </div>
+    <div class="hidden" language="en">
+      <p>Following the construction of the one in Gent, the Tuchthuis in Vilvoorde became the second ‘modern’ prison in the country. Empress Maria Theresa of Austria announced its foundation on December 30th 1773. The site of the ducal fortress of Vilvoorde, that already operates as a prison, is chosen as the location.
+      </p>
+      <div class="audio-wrapper">
+        <iframe style="border: 0; width: 80%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2256079948/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/" seamless><a
+            href="https://korrectietuchthuis.bandcamp.com/album/korrecties">Korrecties by Ditte Jacoby &amp; Freya Van Nieuwenhuysen</a></iframe>
+      </div>
+      <p>
+        Laurent-Benoît Dewez, court architect of the Austrian regime, is appointed as the architect following a competition. Dewez’ neoclassical design is refreshing in an age with predominantly barok. At the time, this neoclassical style was only used for palaces, castles and abbeys.
+      </p>
+    </div>
+    <!-- 3D Image Slideshow HTML -->
+    <!-- <section class="slideshow">
+      <div class="slideshow__wrapper">
+        <div class="slideshow__content">
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-1.jpg" onclick="openLightbox();toSlide(1)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-2.jpg" onclick="openLightbox();toSlide(2)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-3.jpg" onclick="openLightbox();toSlide(3)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-4.jpg" onclick="openLightbox();toSlide(4)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-grafitti.jpg" onclick="openLightbox();toSlide(5)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-plan-1.jpg" onclick="openLightbox();toSlide(6)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-plan-2.jpg" onclick="openLightbox();toSlide(7)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-plan-3.jpg" onclick="openLightbox();toSlide(8)"></figure>
+          <figure class="shadow"><img src="img/carrousel/tuchthuis-militaire-gevangenis.jpg" onclick="openLightbox();toSlide(9)"></figure>
+        </div>
+      </div>
+    </section> -->
+    <!-- End 3D Image Slideshow HTML -->
+    <div class="" language="du">
+      <p>
+        Het Tuchthuis wordt in 1779 in gebruik genomen als gevangenis en blijft dat voor ongeveer 90 jaar, tot 1871. In deze periode krijgt het ook andere functies, zoals hospitaal voor Oostenrijkse of Franse troepen, waarna het weer wordt ingezet
+        als gevangenis. Op haar hoogtepunt telt het Tuchthuis zo’n 3 000 gevangenen. De gevangenis heeft ook een eigen munt waarmee gedetineerden producten kunnen aanschaffen, en een eigen begraafplaats. Na deze periode wordt het een legerkazerne.
+      </p>
+      <img class="img-between" src="img/extra/vecht.gif" alt="Fighting humans">
+      <p>Tegenwoordig is het Tuchthuis de spil van een prestigieus stadsvernieuwingsproject. In het rechtergedeelte zijn een hotel en verschillende verenigingen ondergebracht. De oostvleugel wacht nog op renovatie. Omdat betreden van het gebouw
+        vandaag even moeilijk is als eruit ontsnappen ooit was, brengt het project Tuchthuis AR het Tuchthuis naar buiten.
+      </p>
+      <h3>Tuchthuis in cijfers</h3>
+      <p>190 meter lang, 90 meter diep. <br>
+        Cel: 3 x 1,5 meter, hoogte: 2,4 meter. <br>
+        Raampjes: 50 x 20 cm.</p>
+    </div>
+    <div class="hidden" language="en">
+      <p>
+        The Tuchthuis opened in 1779 and remained a prison for about 90 years, until 1871.
+        During this period it took on other functions, such as a hospital for Austrian or French troops, after which it was used again as a prison.
+        At its peak, the Tuchthuis had about 3,000 inmates. The prison also produced its own coin for inmates to purchase products, and its own cemetery.
+        After this period it came into use as military barracks.
+      </p>
+      <img class="img-between" src="img/extra/vecht.gif" alt="Fighting humans">
+      <p>
+        Today, the Tuchthuis is the hub of a prestigious urban renewal project.
+        In the renovated wing, one can find a hotel and various clubs. The east wing is still awaiting renovation.
+        Because entering the building today is as difficult as escaping once was, the Tuchthuis AR project wants to bring the Tuchthuis outside of its walls and into the open-air.
+      </p>
+      <h3> Tuchthuis in figures</h3>
+      <p> 190 metres long, 90 metres deep. <br>
+        Cel: 3 x 1,5 metres, height: 2,4 metres. <br>
+        Windows: 50 x 20 cm.</p>
+    </div>
+  </section>
+  <section class="audio-wrapper">
+    <iframe style="border: 0; width: 80%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1245467533/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/" seamless><a
+        href="https://korrectietuchthuis.bandcamp.com/track/in-here-i-hear">In here I hear by Jago Moons</a></iframe>
+  </section>
+  <section class="people" id="artists">
+    <h2 class="reveal">Artists</h2>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/rachel-daniels.jpg" alt="Rachel Daniels">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Rachel Megalakakis Daniëls</h3>
+        <h4 class="artist__descr__occupation" language="du">Beeldend kunstenaar</h4>
+        <h4 class="artist__descr__occupation hidden" language="en">Visual artist</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">Rachel Megalakakis Daniëls is een multidisciplinaire kunstenaar uit Limburg. In haar installaties en performatieve werken onderzoekt ze de machtstructuren die actief zijn binnen onze samenlevingn
+          waarbij religie, industrie en subculturen een grote visuele invloed hebben. Haar voornaamste materialen zijn staal, bouwhekken en glas in lood, uitgesproken materialen die een dwingende kracht bevatten en vertonen.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Rachel Megalakakis Daniëls is a multidisciplinary artist from Limburg. In her installations and performative works, she examines the power structures that operate within our society, in
+          which religion, industry and subcultures have a major visual influence. Her main materials are steel, construction fences and stained glass, distinct materials that contain and display a compelling force.
+        </p>
+        <a class="socials" target="_blank" href="https://www.instagram.com/rcaleh/">Instagram</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/magali-hertoghe.jpg" alt="Magali Hertoghe">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Magali Hertoghe</h3>
+        <h4 class="artist__descr__occupation">Architect - student</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">
+          Magali heeft een passie voor het verleden en het heden samen te brengen aan de hand van fysieke en visuele middelen. Afgestudeerd in 2021 als architect aan de UCLouvain te Brussel, verdiept ze zich in het verleden van de architectuur met
+          een aanvullende master erfgoedstudies aan de UAntwerpen. Met dit project heeft ze de kans om de theorie van de voorbije jaren om te zetten in de praktijk.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">
+          Magali has a passion for bringing the past and the present together through physical and visual means. After graduating in 2021 as an architect from UCLouvain in Brussels, she is now deepening her knowledge of the architectural past with an
+          additional master in heritage studies at UAntwerpen. Through this project, she has the opportunity to put the theoretical knowledge of the past years into practice.
+        </p>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/jago-moons.jpg" alt="Jago Moons">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Jago Moons</h3>
+        <h4 class="artist__descr__occupation" language="du">Muzikant / componist</h4>
+        <h4 class="artist__descr__occupation hidden" language="en">Musician / composer</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">Jago Moons (°1988, Antwerpen) studeerde piano bij Jozef De Beenhouwer en compositie bij Wim Henderickx op het Koninklijk Conservatorium Antwerpen.
+          Hij is als vaste reisgezel actief bij muziektheatergezelschap WALPURGIS in verschillende voorstellingen, waaronder de opera voor kinderen 'Fidelio', 'Wij, de Verdronkenen', verschillende libretto-lezingen,...
+          Hij componeert en arrangeert muziek en soundscapes voor (animatie)film, documentaire, theatervoorstellingen en beeldende kunstenaars.
+          In 2021 was hij actief als gastprofessor op het Koninklijk Conservatorium Antwerpen, om masterstudenten Kleinkunst te begeleiden bij hun afstudeerproject.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Jago Moons (°1988, Antwerp) studied piano with Jozef De Beenhouwer and Contemporary Classical Music Composition with Wim Henderickx at The Royal Conservatoire of Antwerp. He is active as a
+          regular traveling companion with Musical Theater Company WALPURGIS for several shows, including the opera for children ‘Fidelio’, ‘We, The Drowned’, several libretto-readings,...
+          He composes music and makes musical arrangements and soundscapes for (animation)movies, documentaries, theatre stage plays and for visual artists.
+          In 2021 he was active as a guest professor at The Royal Conservatoire of Antwerp, to guide master students Kleinkunst with their graduation project.
+        </p>
+        <a class="socials" target="_blank" href="https://www.instagram.com/jago_moons/">Instagram</a>
+        <a class="socials" target="_blank" href="https://soundcloud.com/user-445747776">Soundcloud</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/monica-loyola.jpg" alt="Monica Loyola">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Monica Ruiz Loyola</h3>
+        <h4 class="artist__descr__occupation" language="du">Beeldend kunstenaar</h4>
+        <h4 class="artist__descr__occupation hidden" language="en">Visual artist</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">Monica Ruiz Loyola is een Mexicaanse beeldend kunstenaar. Ze heeft gestudeerd aan de Nationale Autonome Universiteit van Mexico (UNAM) en ze heeft een Master in Digitale kunst behaald aan de
+          Universitat Pompeu Fabra in Barcelona.
+
+          Haar werk is altijd gerelateerd aan het geheugen en identiteit door middel van installaties. Deze waren te zien op verschillende (licht)festivals, galeries en culturele centra wereldwijd.
+
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Monica Ruiz Loyola is a Mexican visual artist. She studied at the National Autonomous University of Mexico (UNAM) and obtained a Master's degree in Digital Art from the Universitat Pompeu
+          Fabra in Barcelona.
+
+          Her work is always related to memory and identity through installations. These were shown at various (light) festivals, galleries and cultural centers worldwide.
+
+        </p>
+        <a class="socials" target="_blank" href="https://www.instagram.com/monikaloyola/">Instagram</a>
+        <a class="socials" target="_blank" href="https://www.monikaloyola.com/">Website</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/ditte-jacoby.jpg" alt="Ditte Jacoby">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Ditte Jacoby</h3>
+        <h4 class="artist__descr__occupation" language="du">Schrijver</h4>
+        <h4 class="artist__descr__occupation hidden" language="en">Writer</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">
+          Ditte studeert in 2021 af als Schrijver aan het RITCS. Ze probeert verschillende facetten van het schrijverschap te onderzoeken door interdisciplinaire samenwerkingen voorop te stellen. Verhalen vertellen blijft daarbij altijd centraal
+          staan.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Ditte graduated as a Writer from the RITCS in 2021. She tries to explore different facets of authorship by putting interdisciplinary collaborations first. Storytelling always remains
+          central to this.
+        </p>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/freya-van.jpg" alt="Freya van Nieuwenhuysen">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Freya van Nieuwenhuysen</h3>
+        <h4 class="artist__descr__occupation" language="du">Audiomaker / radiopresentatrice</h4>
+        <h4 class="artist__descr__occupation hidden" language="en">Audio maker / radio presenter</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">
+          Freya studeert in 2021 af als Audiomaker aan het RITCS. Ze heeft een voorliefde voor audiofictie maar maakte tijdens haar studieperiode aan het RITCS een aantal audiodocumentaires waar menselijkheid en empathie centraal staan. Door haar
+          achtergrond als danser zijn beweging en lichamelijkheid een belangrijke terugkerende factor in haar werk.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">
+          Freya graduated in 2021 as an Audiomaker at the RITCS. She has a preference for audio fiction, but during her study period at the RITCS, she made a number of audio documentaries in which humanity and empathy are central. Because of her
+          background as a dancer, movement and physicality are an important recurring factor in her work.
+        </p>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/stan-lievens.jpg" alt="Stan Lievens">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Stan Lievens</h3>
+        <h4 class="artist__descr__occupation">Illustrator / animator</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">
+          Stan Lievens tekent en animeert met de mens als grootste thema.
+          "Alleen de mens kan zo uniek zijn zonder er om te doen."
+          Als ware filantroop onderzoekt hij graag donkere en unieke thema's waar hij door woordgrappen en een humoristische insteek een frisse bries doorwaait.
+          Zijn kortfilm Krak werd geselecteerd voor Annecy Festival 2022.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">
+          Stan Lievens draws and animates with man as his main theme.
+          "Only man can be so unique without pretending."
+          As a true philanthropist, he likes to explore dark and unique themes through which he blows a fresh breeze by an humorous approach.
+          His short film Krak was selected for Annecy Festival 2022.
+        </p>
+      </div>
+      <a class="socials" target="_blank" href="https://www.instagram.com/stanlievens/">Instagram</a>
+      <a class="socials" target="_blank" href="https://stanlievens.wixsite.com/website">Website</a>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/jannes-lambrecht.jpg" alt="Jannes Lambrecht">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Jannes Lambrecht</h3>
+        <h4 class="artist__descr__occupation">Curator</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">Techy met een achtergrond in techniek, grafisch ontwerp en scenografie. Meer gericht op de processen achter de schoonheid. Freelance webdesigner voor verschillende bedrijven en vrijwilliger in een
+          divers scala aan gemeenschappen en NGO's.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Tech enthousiast with a background in engineering, graphic design and scenography. Focusing more on the processes behind the beauty. Freelance webdesigner for several companies and
+          volunteer in a diverse range of communities and NGO’s.
+        </p>
+        <a class="socials" target="_blank" href="https://www.instagram.com/jeanjacquescollective/">Instagram</a>
+        <a class="socials" target="_blank" href="https://jeanjacquescollective.org">Website</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <img class="artist__image" src="img/artists/lucas-dewulf.jpg" alt="Lucas Dewulf">
+      <div class="artist__name">
+        <h3 class="artist__descr__name">Lucas Dewulf</h3>
+        <h4 class="artist__descr__occupation">Curator</h4>
+      </div>
+      <div class="artist__descr">
+        <p class="artist__descr__descr" language="du">Lucas Dewulf (Almost Norman) is de oprichter van XRT. Hij is een kunstenaar, opvoeder en facilitator die immersieve realiteiten onderzoekt en creëert.<br>
+
+          Hij ontwikkelt zijn artistieke praktijk door het creëren van ervaringen waarin menselijke verbinding centraal staat. Centraal in zijn werk staat het gebruik van de mogelijkheden van digitale technologieën om de fysieke wereld te verkennen
+          en onze analoge aard in de virtuele ruimte in vraag te stellen.
+        </p>
+        <p class="artist__descr__descr hidden" language="en">Lucas Dewulf (Nearly Norman) is the founder of XRT. He is an artist, educator and facilitator exploring and creating immersive realities. <br>
+
+          He is developing his artistic practice creating experiences where human connection is central. Key to his work is using the affordances of digital technologies to explore the physical world and to question our analog nature within virtual
+          space. <br>
+        </p>
+        <a class="socials" target="_blank" href="https://www.instagram.com/nearly.norman/">Instagram</a>
+        <a class="socials" target="_blank" href="https://xrtimmersive.com/nearly-norman/">Website</a>
+      </div>
+    </article>
+  </section>
+  <!-- <section class="artist-statement"  id="artist-statement">
+    <h2>Artist Statement</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section> -->
+
+  <!-- Modal  -->
+
+  <div id="lightbox" class="modal">
+
+    <span class="close pointer" onclick="closeLightbox()">x</span>
+    <div class="modal-content">
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-1.jpg" class="image-slide" alt="Soldaten aan de brug van het Tuchthuis." />
+          <figcaption language="du">Soldaten aan de brug van het Tuchthuis.</figcaption>
+          <figcaption class="hidden" language="en">Soldiers at the bridge of the Disciplinary House.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-2.jpg" class="image-slide" alt="Kanaal en het tuchthuis." />
+          <figcaption language="du">Kanaal en het tuchthuis.</figcaption>
+          <figcaption class="hidden" language="en">Canal and the Disciplinary House.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-3.jpg" class="image-slide" alt="Het Tuchthuis nadat het deels was verwoest." />
+          <figcaption language="du">Het Tuchthuis nadat het deels was verwoest.</figcaption>
+          <figcaption class="hidden" language="en">The Disciplinary House after it was partly destroyed</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-4.jpg" class="image-slide" alt="Algemeen zicht van de Tuchthuis en het kanaal." />
+          <figcaption language="du">Algemeen zicht van de Tuchthuis en het kanaal.</figcaption>
+          <figcaption class="hidden" language="en">General view of the Tuchthuis and the canal.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-grafitti.jpg" class="image-slide" alt="Grafitti in 1 van de cellen, afkomstig van de WO2." />
+          <figcaption language="du">Grafitti in 1 van de cellen, afkomstig van de WO2.</figcaption>
+          <figcaption class="hidden" language="en">Grafitti in 1 of the cells, from the WW2.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-plan-1.jpg" class="image-slide" alt="Plannen van het Tuchthuis." />
+          <figcaption language="du">Plannen van het Tuchthuis.</figcaption>
+          <figcaption class="hidden" language="en">Plans of the Tuchthuis.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-plan-2.jpg" class="image-slide" alt="Plannen van het Tuchthuis." />
+          <figcaption language="du">Plan van Vilvoorde in 1909.</figcaption>
+          <figcaption class="hidden" language="en">Plan of Vilvoorde in 1909.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-plan-3.jpg" class="image-slide" alt="Plannen van het Tuchthuis." />
+          <figcaption language="du">Plannen van het Tuchthuis.</figcaption>
+          <figcaption class="hidden" language="en">Plans of the Tuchthuis.</figcaption>
+        </figure>
+      </div>
+      <div class="slide">
+        <figure>
+          <img src="img/carrousel/tuchthuis-militaire-gevangenis.jpg" class="image-slide" alt="Tuchthuis als militaire gevangenis." />
+          <figcaption language="du">Tuchthuis als militaire gevangenis.</figcaption>
+          <figcaption class="hidden" language="en">Tuchthuis as a military prison.</figcaption>
+        </figure>
+      </div>
+
+      <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+      <div class="dots">
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-1.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-3.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-4.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-grafitti.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-plan-1.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-plan-2.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-plan-3.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="">
+        </div>
+        <div class="col">
+          <img src="img/carrousel/tuchthuis-militaire-gevangenis.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/language.js" charset="utf-8"></script>
+  <script src="js/lightbox.js" charset="utf-8"></script>
+  <script src="js/scroll.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    let closeMenu = () => {
+      document.getElementById("side-menu").checked = false;
+    }
+  </script>
+</body>
+
+</html>
